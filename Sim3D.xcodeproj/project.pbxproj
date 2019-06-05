@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8EB4A8C322864599009BF9E3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4A8C222864599009BF9E3 /* main.cpp */; };
+		8EB4A8CB228645AA009BF9E3 /* setup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4A8C9228645AA009BF9E3 /* setup.cpp */; };
+		8EB4A8CE228645D7009BF9E3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4A8CD228645D7009BF9E3 /* OpenGL.framework */; };
+		8EB4A8D0228645E3009BF9E3 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4A8CF228645E3009BF9E3 /* libGLEW.2.1.0.dylib */; };
+		8EB4A8D5228673AB009BF9E3 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4A8D3228673AB009BF9E3 /* World.cpp */; };
+		8EFE0072228FEFB100F98C50 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFE0071228FEFB100F98C50 /* libglfw.3.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,39 @@
 /* Begin PBXFileReference section */
 		8EB4A8BF22864599009BF9E3 /* Sim3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sim3D; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB4A8C222864599009BF9E3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8EB4A8C9228645AA009BF9E3 /* setup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = setup.cpp; sourceTree = "<group>"; };
+		8EB4A8CA228645AA009BF9E3 /* setup.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = setup.hpp; sourceTree = "<group>"; };
+		8EB4A8CD228645D7009BF9E3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8EB4A8CF228645E3009BF9E3 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		8EB4A8D3228673AB009BF9E3 /* World.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		8EB4A8D4228673AB009BF9E3 /* World.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
+		8EB4A8D72286812A009BF9E3 /* shared.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shared.glsl; sourceTree = "<group>"; };
+		8EB4A8D822869563009BF9E3 /* sphere.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sphere.vs; sourceTree = "<group>"; };
+		8EB4A8D92286A545009BF9E3 /* SphereGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SphereGeometry.h; sourceTree = "<group>"; };
+		8EB79D1B2290ECDA003B976A /* weight.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = weight.gs; sourceTree = "<group>"; };
+		8EB79D1C22912485003B976A /* advect.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = advect.fs; sourceTree = "<group>"; };
+		8EB79D1D22913172003B976A /* extend.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = extend.fs; sourceTree = "<group>"; };
+		8EB79D1E22914774003B976A /* mapToGrid.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = mapToGrid.vs; sourceTree = "<group>"; };
+		8EB79D1F2291477E003B976A /* mapToGrid.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = mapToGrid.fs; sourceTree = "<group>"; };
+		8EB79D2022914786003B976A /* mapToGrid.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = mapToGrid.gs; sourceTree = "<group>"; };
+		8EB79D2122914F6A003B976A /* transfer.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = transfer.fs; sourceTree = "<group>"; };
+		8EB79D452293E78D003B976A /* average.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = average.fs; sourceTree = "<group>"; };
+		8EB79D462293EA56003B976A /* copy3.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = copy3.fs; sourceTree = "<group>"; };
+		8EEF54B02286D3AC00116FDE /* sphere.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sphere.fs; sourceTree = "<group>"; };
+		8EEF54B12286D56400116FDE /* cube.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cube.fs; sourceTree = "<group>"; };
+		8EEF54B22286D67D00116FDE /* texture2d.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = texture2d.vs; sourceTree = "<group>"; };
+		8EFE0007228F84B500F98C50 /* pressure.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = pressure.fs; sourceTree = "<group>"; };
+		8EFE0008228F93D500F98C50 /* quad.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = quad.vs; sourceTree = "<group>"; };
+		8EFE0009228F9BD000F98C50 /* layer.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = layer.vs; sourceTree = "<group>"; };
+		8EFE000A228F9D7800F98C50 /* gridForce.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gridForce.fs; sourceTree = "<group>"; };
+		8EFE000B228FA1B500F98C50 /* divergence.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = divergence.fs; sourceTree = "<group>"; };
+		8EFE000C228FA54200F98C50 /* subtract.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = subtract.fs; sourceTree = "<group>"; };
+		8EFE000D228FB15300F98C50 /* clear.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = clear.fs; sourceTree = "<group>"; };
+		8EFE0071228FEFB100F98C50 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		8EFE0073228FF02900F98C50 /* layer.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = layer.gs; sourceTree = "<group>"; };
+		8EFEFFEC228EC30000F98C50 /* step.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = step.fs; sourceTree = "<group>"; };
+		8EFEFFED228F73B300F98C50 /* weight.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = weight.fs; sourceTree = "<group>"; };
+		8EFEFFEE228F740200F98C50 /* weight.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = weight.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFE0072228FEFB100F98C50 /* libglfw.3.3.dylib in Frameworks */,
+				8EB4A8D0228645E3009BF9E3 /* libGLEW.2.1.0.dylib in Frameworks */,
+				8EB4A8CE228645D7009BF9E3 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +84,7 @@
 			children = (
 				8EB4A8C122864599009BF9E3 /* Sim3D */,
 				8EB4A8C022864599009BF9E3 /* Products */,
+				8EB4A8CC228645D7009BF9E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +100,56 @@
 			isa = PBXGroup;
 			children = (
 				8EB4A8C222864599009BF9E3 /* main.cpp */,
+				8EB4A8D3228673AB009BF9E3 /* World.cpp */,
+				8EB4A8D4228673AB009BF9E3 /* World.hpp */,
+				8EB4A8D92286A545009BF9E3 /* SphereGeometry.h */,
+				8EB4A8C9228645AA009BF9E3 /* setup.cpp */,
+				8EB4A8CA228645AA009BF9E3 /* setup.hpp */,
+				8EB4A8D622868111009BF9E3 /* glsl */,
 			);
 			path = Sim3D;
+			sourceTree = "<group>";
+		};
+		8EB4A8CC228645D7009BF9E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EFE0071228FEFB100F98C50 /* libglfw.3.3.dylib */,
+				8EB4A8CF228645E3009BF9E3 /* libGLEW.2.1.0.dylib */,
+				8EB4A8CD228645D7009BF9E3 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EB4A8D622868111009BF9E3 /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				8EB4A8D822869563009BF9E3 /* sphere.vs */,
+				8EEF54B02286D3AC00116FDE /* sphere.fs */,
+				8EEF54B22286D67D00116FDE /* texture2d.vs */,
+				8EEF54B12286D56400116FDE /* cube.fs */,
+				8EB79D1E22914774003B976A /* mapToGrid.vs */,
+				8EB79D2022914786003B976A /* mapToGrid.gs */,
+				8EB79D1F2291477E003B976A /* mapToGrid.fs */,
+				8EFEFFEE228F740200F98C50 /* weight.vs */,
+				8EFEFFED228F73B300F98C50 /* weight.fs */,
+				8EB79D1B2290ECDA003B976A /* weight.gs */,
+				8EFE0007228F84B500F98C50 /* pressure.fs */,
+				8EFE000B228FA1B500F98C50 /* divergence.fs */,
+				8EFE0008228F93D500F98C50 /* quad.vs */,
+				8EFE0009228F9BD000F98C50 /* layer.vs */,
+				8EFE0073228FF02900F98C50 /* layer.gs */,
+				8EFE000A228F9D7800F98C50 /* gridForce.fs */,
+				8EFE000C228FA54200F98C50 /* subtract.fs */,
+				8EFE000D228FB15300F98C50 /* clear.fs */,
+				8EB79D1C22912485003B976A /* advect.fs */,
+				8EB79D1D22913172003B976A /* extend.fs */,
+				8EB79D452293E78D003B976A /* average.fs */,
+				8EFEFFEC228EC30000F98C50 /* step.fs */,
+				8EB79D462293EA56003B976A /* copy3.fs */,
+				8EB79D2122914F6A003B976A /* transfer.fs */,
+				8EB4A8D72286812A009BF9E3 /* shared.glsl */,
+			);
+			path = glsl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB4A8C322864599009BF9E3 /* main.cpp in Sources */,
+				8EB4A8CB228645AA009BF9E3 /* setup.cpp in Sources */,
+				8EB4A8D5228673AB009BF9E3 /* World.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +331,15 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDS6RVS6JM;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +349,15 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDS6RVS6JM;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
