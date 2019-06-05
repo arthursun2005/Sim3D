@@ -56,7 +56,7 @@ void mouseCallback(GLFWwindow* window, int button, int action, int mods)
 {
 }
 
-float sp = 0.5f;
+float sp = 1.0f;
 float siz = sp * 0.5f;
 float w0 = 8.0f / (sp * sp * sp);
 
@@ -94,7 +94,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 void initialize() {
     initBases();
     
-    world = new World(32, 32, 16);
+    world = new World(64, 128, 64);
     world->setSphereGeometry(4, 4);
     
     world->w0 = w0;
